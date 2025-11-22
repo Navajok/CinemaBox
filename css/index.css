@@ -1,0 +1,129 @@
+.moviebanner{
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+}
+
+.numbertext{
+    background-size: cover;
+    background-position: center;
+    width: 1400px;
+    height: 700px;
+}
+
+/* ======================================================== */
+/* Basic slideshow container styles */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+}
+
+.slideshow-container .slide img {
+    width: 100%;
+}
+
+/* Navigation dots */
+.navigation {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.dot {
+    height: 7px; 
+    width: 7px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    transition: 0.6s ease;
+    user-select: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+.next {
+  right: 0;
+}
+.prev {
+  left: 0;
+}
+
+.title {
+    position: absolute; 
+    top: 80%;
+    left: 5%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.description {
+    position: absolute; 
+    top: 88%;
+    left: 5%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-size: 8px;
+    transition: 0.6s ease;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+    font-size: 32px;
+    }
+
+    .description{
+        font-size: 12px;
+    }
+
+    .dot {
+    height: 11px; 
+    width: 11px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .title {
+    font-size: 48px;
+    }
+
+    .description{
+        font-size: 16px;
+    }
+
+    .dot {
+    height: 15px; 
+    width: 15px;
+    }
+}

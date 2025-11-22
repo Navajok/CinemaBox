@@ -1,0 +1,197 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (max-width:768px) {   
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:480px) {   
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width:768px) {   
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .grid-container {
+        grid-template-columns: repeat(6,1fr);
+    }
+}
+.img-box {
+    aspect-ratio: 2 / 3;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-basis: 270px;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box:hover {
+    transform: scale(1.05);
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.movie{
+    width: 100%;
+    height: 100%;
+}
+
+/* === Hover Overlay Effect for Food Items === */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+/* -------------------------------------------------------------------*/
+
+.bookButton, .deletebutton, .editbutton {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+
+.bookButton:hover , .deletebutton:hover, .editbutton:hover{
+    background-color: #f00;
+    color: white;
+}
+.bigsearch{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #333;
+    border-radius: 30px;
+    padding: 5px;
+    width: 300px;
+}
+
+.searchBar {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    width: 80%;
+    padding: 10px;
+}
+
+.searchButton {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.searchBar:focus {
+    outline: none;
+}
+
+.selectitem{
+    color: rgb(127, 127, 127);
+    background-color: #333;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+}
+
+.selectitem option{
+    border-radius: 25px;
+    width: 300px;
+}
+
+.topbar{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.topbar label {
+    font-size: 24px;
+    color: white;
+}
+
+
+.popupBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popupBox {
+    background: white;
+    color: black;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#popupOkBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

@@ -1,0 +1,193 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    min-width: 320px;   
+    background-color: rgb(28, 27, 27);
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+}
+
+header,
+#main,
+footer {
+    align-items: center;
+    text-align: center;
+}
+
+#main {
+    flex: 1;
+}
+
+/* ==============HEADER============== */
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav label { 
+    display: inline-block;
+    color: white;
+    font-size: 36px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#menu li a:hover, #login li a:hover {
+    color: rgb(172,26,14)
+}
+
+#hamburger {
+    display: none;
+}
+
+.line{
+    display: none;
+}
+
+#menu, #login {
+    display: none;
+    list-style-type: none;
+    flex-direction: column;
+    width: 100%;
+}   
+
+/* Show menu if hamburger checked */
+#hamburger:checked ~ #menu,#hamburger:checked ~ #login {
+    display: flex;
+}
+
+/* Menu links */
+#menu li, #login li {
+    text-align: left;
+}
+
+#menu li a, #login li a {
+    display: block;
+    text-decoration: none;
+    color: white; 
+    padding: 10px 10px;
+    margin: 0px;
+    line-height: 1;
+    border-top: 1px solid #a01548; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav {
+    background-color: rgb(7,7,7);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+/* Logo */
+#logo {
+    height: 75px;
+    margin: 5px 0px 5px 0px;
+}
+/* ===================================== */
+
+
+h1, h2, h3 {
+    color:#ac164d;
+    text-align: center;
+    font-weight: bolder;
+}
+
+h1 {
+    margin:15px 0px;
+    font-size:larger;    
+}
+
+h2 {
+    margin:15px 0px;
+    font-size:large;
+}
+
+h3 {
+    margin:15px 0px;
+    font-size:medium;
+}
+
+.button {
+    color:white;
+    padding:8px 15px;
+    margin: 15px;
+    background-color: #a01548;        
+    border:none;
+    border-radius: 15px;    
+}
+
+.disabled {
+    background-color: #e0dbdd;
+}
+
+.rightalign {
+    text-align: right;
+}
+
+.leftalign {
+    text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+    #menu, #login {
+        display:flex;
+        flex-direction: row;
+        justify-content: center
+    }
+
+    #menu li a,#login li a {
+        border-top:none;
+    }
+    .line{
+    display: block;
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+    }
+
+    /* Hide hamburger */
+    nav label, #hamburger { display: none; }
+}
+
+@media screen and (min-width:1200px) { /* Navbar is default column, changes to row when >= 480px */
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    #menu, #login {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;    
+        align-items: center;    
+        width: auto;
+        clear: both;
+    }
+
+    #menu li {
+        margin-left: 20px;
+    }
+    
+    #login li a, #menu li a {
+        font-size: 24px;
+        border-top: none;
+    }
+
+    .line{
+    display: block;
+    font-weight: lighter;
+    color: white;
+    margin: 0px -5px 0px -5px;
+    }
+}
